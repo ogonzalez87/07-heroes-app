@@ -4,8 +4,8 @@ import { getHeroesById } from "../../selectors/getHeroById";
 
 export const HeroScreen = ({ history }) => {
   const { heroeId } = useParams();
-  
-  const hero = useMemo(() => getHeroesById(heroeId), [heroeId]) ;
+
+  const hero = useMemo(() => getHeroesById(heroeId), [heroeId]);
 
   if (!hero) {
     return <Redirect to="/" />;
@@ -31,7 +31,7 @@ export const HeroScreen = ({ history }) => {
     <div className="row mt-5">
       <div className="col-4">
         <img
-          className="img-thumbnail"
+          className="img-thumbnail animate__animated animate__fadeInLeft"
           alt={superhero}
           src={`../assets/heroes/${heroeId}.jpg`}
         />
